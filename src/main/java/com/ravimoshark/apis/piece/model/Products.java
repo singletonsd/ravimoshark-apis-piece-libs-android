@@ -33,7 +33,7 @@ import java.io.Serializable;
  * Products information.
  */
 @Schema(description = "Products information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-25T11:52:49.360+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-25T16:01:41.420+02:00[Europe/Paris]")
 public class Products implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("piece")

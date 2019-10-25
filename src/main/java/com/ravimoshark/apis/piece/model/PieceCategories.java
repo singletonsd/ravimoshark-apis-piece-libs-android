@@ -27,14 +27,17 @@ import java.io.Serializable;
  * Pieces categories information.
  */
 @Schema(description = "Pieces categories information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-25T11:52:49.360+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-25T16:01:41.420+02:00[Europe/Paris]")
 public class PieceCategories implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("name")
   private String name = null;
 
-  @SerializedName("imagePath")
-  private String imagePath = null;
+  @SerializedName("imageName")
+  private String imageName = null;
+
+  @SerializedName("imageExtension")
+  private String imageExtension = null;
 
   @SerializedName("createdAt")
   private Date createdAt = null;
@@ -63,22 +66,40 @@ public class PieceCategories implements Serializable{
     this.name = name;
   }
 
-  public PieceCategories imagePath(String imagePath) {
-    this.imagePath = imagePath;
+  public PieceCategories imageName(String imageName) {
+    this.imageName = imageName;
     return this;
   }
 
    /**
-   * Get imagePath
-   * @return imagePath
+   * Get imageName
+   * @return imageName
   **/
   @Schema(description = "")
-  public String getImagePath() {
-    return imagePath;
+  public String getImageName() {
+    return imageName;
   }
 
-  public void setImagePath(String imagePath) {
-    this.imagePath = imagePath;
+  public void setImageName(String imageName) {
+    this.imageName = imageName;
+  }
+
+  public PieceCategories imageExtension(String imageExtension) {
+    this.imageExtension = imageExtension;
+    return this;
+  }
+
+   /**
+   * Get imageExtension
+   * @return imageExtension
+  **/
+  @Schema(description = "")
+  public String getImageExtension() {
+    return imageExtension;
+  }
+
+  public void setImageExtension(String imageExtension) {
+    this.imageExtension = imageExtension;
   }
 
   public PieceCategories createdAt(Date createdAt) {
@@ -146,7 +167,8 @@ public class PieceCategories implements Serializable{
     }
     PieceCategories pieceCategories = (PieceCategories) o;
     return Objects.equals(this.name, pieceCategories.name) &&
-        Objects.equals(this.imagePath, pieceCategories.imagePath) &&
+        Objects.equals(this.imageName, pieceCategories.imageName) &&
+        Objects.equals(this.imageExtension, pieceCategories.imageExtension) &&
         Objects.equals(this.createdAt, pieceCategories.createdAt) &&
         Objects.equals(this.updatedAt, pieceCategories.updatedAt) &&
         Objects.equals(this.deleted, pieceCategories.deleted);
@@ -154,7 +176,7 @@ public class PieceCategories implements Serializable{
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, imagePath, createdAt, updatedAt, deleted);
+    return Objects.hash(name, imageName, imageExtension, createdAt, updatedAt, deleted);
   }
 
 
@@ -164,7 +186,8 @@ public class PieceCategories implements Serializable{
     sb.append("class PieceCategories {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    imagePath: ").append(toIndentedString(imagePath)).append("\n");
+    sb.append("    imageName: ").append(toIndentedString(imageName)).append("\n");
+    sb.append("    imageExtension: ").append(toIndentedString(imageExtension)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
     sb.append("    deleted: ").append(toIndentedString(deleted)).append("\n");

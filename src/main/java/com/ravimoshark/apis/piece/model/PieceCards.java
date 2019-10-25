@@ -19,6 +19,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.ravimoshark.apis.piece.model.PieceCategories;
 import com.ravimoshark.apis.piece.model.Pieces;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
@@ -28,7 +29,7 @@ import java.io.Serializable;
  * Pieces card information.
  */
 @Schema(description = "Pieces card information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-25T11:52:49.360+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-25T16:01:41.420+02:00[Europe/Paris]")
 public class PieceCards implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("id")
@@ -43,11 +44,14 @@ public class PieceCards implements Serializable{
   @SerializedName("description")
   private String description = null;
 
-  @SerializedName("category")
-  private String category = null;
+  @SerializedName("categoryId")
+  private String categoryId = null;
 
-  @SerializedName("imagePath")
-  private String imagePath = null;
+  @SerializedName("category")
+  private PieceCategories category = null;
+
+  @SerializedName("imageName")
+  private String imageName = null;
 
   @SerializedName("createdAt")
   private Date createdAt = null;
@@ -130,7 +134,25 @@ public class PieceCards implements Serializable{
     this.description = description;
   }
 
-  public PieceCards category(String category) {
+  public PieceCards categoryId(String categoryId) {
+    this.categoryId = categoryId;
+    return this;
+  }
+
+   /**
+   * Get categoryId
+   * @return categoryId
+  **/
+  @Schema(description = "")
+  public String getCategoryId() {
+    return categoryId;
+  }
+
+  public void setCategoryId(String categoryId) {
+    this.categoryId = categoryId;
+  }
+
+  public PieceCards category(PieceCategories category) {
     this.category = category;
     return this;
   }
@@ -140,30 +162,30 @@ public class PieceCards implements Serializable{
    * @return category
   **/
   @Schema(description = "")
-  public String getCategory() {
+  public PieceCategories getCategory() {
     return category;
   }
 
-  public void setCategory(String category) {
+  public void setCategory(PieceCategories category) {
     this.category = category;
   }
 
-  public PieceCards imagePath(String imagePath) {
-    this.imagePath = imagePath;
+  public PieceCards imageName(String imageName) {
+    this.imageName = imageName;
     return this;
   }
 
    /**
-   * Get imagePath
-   * @return imagePath
+   * Get imageName
+   * @return imageName
   **/
   @Schema(description = "")
-  public String getImagePath() {
-    return imagePath;
+  public String getImageName() {
+    return imageName;
   }
 
-  public void setImagePath(String imagePath) {
-    this.imagePath = imagePath;
+  public void setImageName(String imageName) {
+    this.imageName = imageName;
   }
 
   public PieceCards createdAt(Date createdAt) {
@@ -234,8 +256,9 @@ public class PieceCards implements Serializable{
         Objects.equals(this.piece, pieceCards.piece) &&
         Objects.equals(this.refArticle, pieceCards.refArticle) &&
         Objects.equals(this.description, pieceCards.description) &&
+        Objects.equals(this.categoryId, pieceCards.categoryId) &&
         Objects.equals(this.category, pieceCards.category) &&
-        Objects.equals(this.imagePath, pieceCards.imagePath) &&
+        Objects.equals(this.imageName, pieceCards.imageName) &&
         Objects.equals(this.createdAt, pieceCards.createdAt) &&
         Objects.equals(this.updatedAt, pieceCards.updatedAt) &&
         Objects.equals(this.deleted, pieceCards.deleted);
@@ -243,7 +266,7 @@ public class PieceCards implements Serializable{
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, piece, refArticle, description, category, imagePath, createdAt, updatedAt, deleted);
+    return Objects.hash(id, piece, refArticle, description, categoryId, category, imageName, createdAt, updatedAt, deleted);
   }
 
 
@@ -256,8 +279,9 @@ public class PieceCards implements Serializable{
     sb.append("    piece: ").append(toIndentedString(piece)).append("\n");
     sb.append("    refArticle: ").append(toIndentedString(refArticle)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    categoryId: ").append(toIndentedString(categoryId)).append("\n");
     sb.append("    category: ").append(toIndentedString(category)).append("\n");
-    sb.append("    imagePath: ").append(toIndentedString(imagePath)).append("\n");
+    sb.append("    imageName: ").append(toIndentedString(imageName)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
     sb.append("    deleted: ").append(toIndentedString(deleted)).append("\n");

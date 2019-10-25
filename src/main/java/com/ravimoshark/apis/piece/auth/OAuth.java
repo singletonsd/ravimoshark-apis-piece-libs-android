@@ -17,7 +17,7 @@ import com.ravimoshark.apis.piece.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-25T11:52:49.360+02:00[Europe/Paris]")public class OAuth implements Authentication {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-25T16:01:41.420+02:00[Europe/Paris]")public class OAuth implements Authentication {
   private String accessToken;
 
   public String getAccessToken() {
