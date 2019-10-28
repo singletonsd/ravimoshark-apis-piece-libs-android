@@ -23,7 +23,7 @@ Get one piece.
 
 
 PiecesApi apiInstance = new PiecesApi();
-Long refArticle = 789L; // Long | reference of piece to delete or search
+String refArticle = "refArticle_example"; // String | reference of piece to delete or search
 Deleted deleted = new Deleted(); // Deleted | Get all, deleted, not deleted data. Default not deleted.
 try {
     Pieces result = apiInstance.getPieceById(refArticle, deleted);
@@ -38,7 +38,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **refArticle** | **Long**| reference of piece to delete or search |
+ **refArticle** | **String**| reference of piece to delete or search |
  **deleted** | [**Deleted**](.md)| Get all, deleted, not deleted data. Default not deleted. | [optional]
 
 ### Return type

@@ -66,7 +66,7 @@ public class PiecesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getPieceByIdCall(Long refArticle, Deleted deleted, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getPieceByIdCall(String refArticle, Deleted deleted, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -111,7 +111,7 @@ public class PiecesApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getPieceByIdValidateBeforeCall(Long refArticle, Deleted deleted, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getPieceByIdValidateBeforeCall(String refArticle, Deleted deleted, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'refArticle' is set
         if (refArticle == null) {
             throw new ApiException("Missing the required parameter 'refArticle' when calling getPieceById(Async)");
@@ -134,7 +134,7 @@ public class PiecesApi {
      * @return Pieces
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Pieces getPieceById(Long refArticle, Deleted deleted) throws ApiException {
+    public Pieces getPieceById(String refArticle, Deleted deleted) throws ApiException {
         ApiResponse<Pieces> resp = getPieceByIdWithHttpInfo(refArticle, deleted);
         return resp.getData();
     }
@@ -147,7 +147,7 @@ public class PiecesApi {
      * @return ApiResponse&lt;Pieces&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Pieces> getPieceByIdWithHttpInfo(Long refArticle, Deleted deleted) throws ApiException {
+    public ApiResponse<Pieces> getPieceByIdWithHttpInfo(String refArticle, Deleted deleted) throws ApiException {
         com.squareup.okhttp.Call call = getPieceByIdValidateBeforeCall(refArticle, deleted, null, null);
         Type localVarReturnType = new TypeToken<Pieces>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -162,7 +162,7 @@ public class PiecesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getPieceByIdAsync(Long refArticle, Deleted deleted, final ApiCallback<Pieces> callback) throws ApiException {
+    public com.squareup.okhttp.Call getPieceByIdAsync(String refArticle, Deleted deleted, final ApiCallback<Pieces> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

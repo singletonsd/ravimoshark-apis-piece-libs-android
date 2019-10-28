@@ -29,7 +29,7 @@ import java.io.Serializable;
  * Pieces card information.
  */
 @Schema(description = "Pieces card information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-25T16:01:41.420+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-28T11:15:10.127+01:00[Europe/Paris]")
 public class PieceCards implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("id")
