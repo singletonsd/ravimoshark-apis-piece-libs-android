@@ -44,7 +44,7 @@ public class PiecesApiTest {
      */
     @Test
     public void getPieceByIdTest() throws ApiException {
-        Long refArticle = null;
+        String refArticle = null;
         Deleted deleted = null;
         Pieces response = api.getPieceById(refArticle, deleted);
 
