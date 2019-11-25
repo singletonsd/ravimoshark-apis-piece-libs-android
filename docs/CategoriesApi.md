@@ -1,6 +1,6 @@
 # CategoriesApi
 
-All URIs are relative to *http://localhost:8003*
+All URIs are relative to *http://localhost:8000*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,9 +17,24 @@ Get all categories.
 ### Example
 ```java
 // Import classes:
+//import com.ravimoshark.apis.piece.ApiClient;
 //import com.ravimoshark.apis.piece.ApiException;
+//import com.ravimoshark.apis.piece.Configuration;
+//import com.ravimoshark.apis.piece.auth.*;
 //import com.ravimoshark.apis.piece.calls.CategoriesApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+
+// Configure OAuth2 access token for authorization: main_auth
+OAuth main_auth = (OAuth) defaultClient.getAuthentication("main_auth");
+main_auth.setAccessToken("YOUR ACCESS TOKEN");
 
 CategoriesApi apiInstance = new CategoriesApi();
 Integer skip = 56; // Integer | number of item to skip
@@ -56,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[api_key](../README.md#api_key)[bearer_auth](../README.md#bearer_auth)[main_auth](../README.md#main_auth)
 
 ### HTTP request headers
 

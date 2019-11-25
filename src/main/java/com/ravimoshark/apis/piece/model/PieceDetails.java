@@ -28,7 +28,7 @@ import java.io.Serializable;
  * Pieces detail information.
  */
 @Schema(description = "Pieces detail information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-28T11:15:10.127+01:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-11-25T15:45:54.964081+11:00[Australia/Sydney]")
 public class PieceDetails implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("id")

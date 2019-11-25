@@ -48,7 +48,7 @@ import com.ravimoshark.apis.piece.auth.OAuth;
 
 public class ApiClient {
 
-    private String basePath = "http://localhost:8003";
+    private String basePath = "http://localhost:8000";
     private boolean debugging = false;
     private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
     private String tempFolderPath = null;
@@ -85,6 +85,9 @@ public class ApiClient {
 
         // Setup authentications (key: authentication name, value: authentication).
         authentications = new HashMap<String, Authentication>();
+        authentications.put("api_key", new ApiKeyAuth("header", "api_key"));
+        authentications.put("bearer_auth", new OAuth());
+        authentications.put("main_auth", new OAuth());
         // Prevent the authentications from being modified.
         authentications = Collections.unmodifiableMap(authentications);
     }
@@ -101,7 +104,7 @@ public class ApiClient {
     /**
      * Set base path
      *
-     * @param basePath Base path of the URL (e.g http://localhost:8003
+     * @param basePath Base path of the URL (e.g http://localhost:8000
      * @return An instance of OkHttpClient
      */
     public ApiClient setBasePath(String basePath) {
